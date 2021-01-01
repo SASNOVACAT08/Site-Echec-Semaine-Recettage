@@ -25,6 +25,7 @@ h2{
 }
 
 .button_nav{
+	display: inline-block;
     width: 150px;
     height: 30px;
     margin: 0 2px;
@@ -66,8 +67,6 @@ h2{
     display: none;
 }
 
-
-
 /*____________________________Mobile____________________________*/
 
 @media screen and (max-width:800px){
@@ -81,4 +80,14 @@ h2{
         display: initial;
     }
 
+}
+
+/*____________________________Class_Changeantes____________________________*/
+
+.navigation_edit{
+    height: 220px !important;
+}
+
+.button_nav_edit{
+    display: block !important;
 }
