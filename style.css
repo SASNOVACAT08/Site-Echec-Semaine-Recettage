@@ -67,9 +67,66 @@ h2{
     display: none;
 }
 
+/*____________________________Page_apprendre_à_jouer____________________________*/
+
+.section_2{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.section_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid orange;
+}
+
+.back_color{
+    background-color: #1d1d1d;
+}
+
+.section_titre{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    border-bottom: 1px solid orange;
+}
+
+.section_titre h2{
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.img_plateau{
+    width: 50%;
+}
+
+.section_div p{
+    margin: 0;
+    padding: 0 15%;
+}
+
 /*____________________________Mobile____________________________*/
 
 @media screen and (max-width:800px){
+
+    .section_2{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .section_div{
+        width: 100%;
+        padding: 30px 0;
+        min-height: 250px;
+    }
+
+    .order_div{
+        order: 1;
+    }
 
     .button_nav{
         display: none;
