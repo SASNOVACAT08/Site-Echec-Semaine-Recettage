@@ -80,7 +80,7 @@ h2{
     align-items: center;
     justify-content: center;
     width: 50%;
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid white;
 }
 
 .back_color{
@@ -92,7 +92,7 @@ h2{
     text-align: center;
     padding: 10px 0;
     color: white;
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid white;
 }
 
 .section_titre h2{
@@ -154,4 +154,35 @@ h2{
 
 .button_nav_edit{
     display: block !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#clear:hover{
+    transform: scale(1.1,1.1);
+}
+
+#timer:hover{
+    transform: scale(1.1,1.1);
+}
+
+.buttonquest:hover{
+    transform: scale(1.1,1.1);
 }
