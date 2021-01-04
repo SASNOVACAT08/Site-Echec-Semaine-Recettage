@@ -34,15 +34,16 @@
     <section>
       <div id="board1" style="width: 400px"></div>
       <button id="clear">Clear</button>
-      <div>
+      <div style="display: inline-block;padding: 0 0 0 100px;">
         <p>Blanc</p>
         <p id="white">10:00</p>
       </div>
-      <div>
+      <div style="display: inline-block;padding: 0 0 0 0100px;">
         <p>Noir</p>
         <p id="black">10:00</p>
-      </div>
-      <button id="timer">Start Timer</button>
+      </div><br>
+      <button id="timer">Start Timer</button><br><br>
+      <div id="timeTurn"></div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -142,15 +143,31 @@
       };
 
       let colors = {
-        white: 10,
-        black: 30,
+        white: 600,
+        black: 600,
       };
-
+	  
+	  let turn = 0;
+	  let start = false;
+	  let turnSeconds = 0;
+	  let turnMinutes = 0;
+	  const timerTurn = document.getElementById("timeTurn");
       let timerButton = document.getElementById("timer");
       let interval;
       function Turn(color) {
-        interval = setInterval(() => {
+		if (start != false){
+		  let numberFormat = ("0" + turnSeconds).slice(-2);
+		  let colorPrec;
+		  color === "black" ? colorPrec = "blanc &emsp;" : colorPrec = "noir &emsp;&ensp;&nbsp";
+		  timerTurn.insertAdjacentHTML("beforeend", "<p class='turnFocus' style='margin: 0;'>tour " + turn + " - " + colorPrec + "   <span style='color:blue;'>"  + turnMinutes + " : " + numberFormat + "</span></p>");
+		  document.getElementsByClassName('turnFocus')[document.getElementsByClassName('turnFocus').length - 1].scrollIntoView({behavior: "smooth"});
+        } else {
+		  start = true;
+		}
+		interval = setInterval(() => {
           colors[color] -= 1;
+		  turnSeconds += 1;
+		  if (turnSeconds === 60) {turnSeconds = 0; turnMinutes += 1}
           let minutes = Math.floor(colors[color] / 60);
           let seconds = colors[color] % 60;
           document.getElementById(color).innerHTML = minutes + ":" + seconds;
@@ -160,6 +177,9 @@
             alert("Plus de temps !");
           }
         }, 1000);
+		if (color === "white") turn++;
+		turnSeconds = 0;
+		turnMinutes = 0;
       }
 
       timer.onclick = () => {
