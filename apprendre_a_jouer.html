@@ -1,97 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <title>Site pour apprendre les échecs</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-    <head>
-        <title>Site pour apprendre les échecs</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="robots" content="noindex">
-        <link rel="stylesheet" type="text/css" href="style.css" />
-    </head>
+  <body>
+    <nav id="navigation">
+      <p id="menuOpen">Menu</p>
+      <button
+        onclick="location.href = 'apprendre_a_jouer.html';"
+        class="button_nav"
+      >
+        Apprendre à jouer
+      </button>
+      <button onclick="location.href = 'sandbox.html';" class="button_nav">
+        Bac à sable
+      </button>
+      <button onclick="location.href = 'exercices.html';" class="button_nav">
+        Exercices pratiques
+      </button>
+      <button onclick="location.href = 'versus.html';" class="button_nav">
+        1 contre 1 local
+      </button>
+    </nav>
 
-    <body>
+    <section class="section_titre back_color">
+      <h2>Les Bases</h2>
+    </section>
 
-        <nav id="navigation">
-            <p id="menuOpen">Menu</p>
-            <button onclick="location.href = 'apprendre_a_jouer.html';" class="button_nav">Apprendre à jouer</button>
-            <button class="button_nav">Bac à sable</button>
-            <button class="button_nav">Exercices pratiques</button>
-            <button class="button_nav">1 contre 1 local</button>
-        </nav>
+    <section class="section_2">
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/board.jpg" alt="jeu d'échec" />
+      </div>
+      <div class="section_div">
+        <p>
+          Un jeu d'échec se compose d'un plateau d'échec et de 32 pièces(16
+          pièces blanches et 16 pièces noirs).<br />Un plateau d'échec à 64 case
+          (8 lignes et 8 colonnes).
+        </p>
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Bases</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : Le Pion</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div back_color"><img class="img_plateau" src="img/board.jpg" alt="jeu d'échec"></div>
-            <div class="section_div"><p>Un jeu d'échec se compose d'un plateau d'échec et de 32 pièces(16 pièces blanches et 16 pièces noirs).<br>Un plateau d'échec à 64 case (8 lignes et 8 colonnes).</p></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div order_div">
+        <p>
+          Le pion est la pièces la moins puissante du jeu et aussi la plus
+          présente sur le plateau, puisque chaque joueur débute avec 8 pions.<br />Le
+          pion se déplace de 1 case vers l'avant uniquement (ne peut jamais
+          reculer) et peut manger les pièces sur les diagonales devant elle.<br />
+          De plus le pion à un pouvoir spéciale lors de son premier mouvement
+          puisqu'il peut se déplacer de 1 case ou de 2 vers l'avant<br />
+        </p>
+      </div>
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/pion.jpg" alt="Le Pion" />
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : Le Pion</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : La Tour</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div order_div"><p>Le pion est la pièces la moins puissante du jeu et aussi la plus présente sur le plateau, puisque chaque joueur débute avec 8 pions.<br>Le pion se déplace de 1 case vers l'avant uniquement (ne peut jamais reculer) et peut manger les pièces sur les diagonales devant elle.<br> De plus le pion à un pouvoir spéciale lors de son premier mouvement puisqu'il peut se déplacer de 1 case ou de 2 vers l'avant<br></p></div>
-            <div class="section_div back_color"><img class="img_plateau" src="img/pion.jpg" alt="Le Pion"></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/tour.jpg" alt="La Tour" />
+      </div>
+      <div class="section_div">
+        <p>
+          La tour est une pièce qui peut se déplacer horizontalement et
+          verticalement sur le plateau d'autant de case qu'elle le souhaite.<br />Elle
+          ne peut pas sauter au dessus d'une pièce quelle qu'elle soit.
+        </p>
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : La Tour</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : Le Fou</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div back_color"><img class="img_plateau" src="img/tour.jpg" alt="La Tour"></div>
-            <div class="section_div"><p>La tour est une pièce qui peut se déplacer horizontalement et verticalement sur le plateau d'autant de case qu'elle le souhaite.<br>Elle ne peut pas sauter au dessus d'une pièce quelle qu'elle soit.</p></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div order_div">
+        <p>
+          Le fou est une pièce qui peut se déplacer seulement sur les diagonales
+          sur le plateau d'autant de case qu'elle le souhaite.<br />Le fou ne
+          sera jamais sur une case noir s'il à commencer sur une case
+          blanche.<br />Elle ne peut pas sauter au dessus d'une pièce quelle
+          qu'elle soit.
+        </p>
+      </div>
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/fou.jpg" alt="Le Fou" />
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : Le Fou</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : Le Cavalier</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div order_div"><p>Le fou est une pièce qui peut se déplacer seulement sur les diagonales sur le plateau d'autant de case qu'elle le souhaite.<br>Le fou ne sera jamais sur une case noir s'il à commencer sur une case blanche.<br>Elle ne peut pas sauter au dessus d'une pièce quelle qu'elle soit.</p></div>
-            <div class="section_div back_color"><img class="img_plateau" src="img/fou.jpg" alt="Le Fou"></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/cavalier.jpg" alt="Le Cavalier" />
+      </div>
+      <div class="section_div">
+        <p>
+          Le Cavalier se déplace toujours de deux cases verticalement puis d’une
+          dans l’autre direction (on dit qu'il se déplace en L ou Y). C'est
+          aussi la seule pièce qui peut sauter au dessus des autres pièces du
+          jeu.
+        </p>
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : Le Cavalier</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : La Reine</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div back_color"><img class="img_plateau" src="img/cavalier.jpg" alt="Le Cavalier"></div>
-            <div class="section_div"><p>Le Cavalier se déplace toujours de deux cases verticalement puis d’une dans l’autre direction (on dit qu'il se déplace en L ou Y). C'est aussi la seule pièce qui peut sauter au dessus des autres pièces du jeu.</p></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div order_div">
+        <p>
+          La reine est considérée comme la pièce la plus puissante du jeu.<br />
+          elle possède les mêmes déplacement que la tour et le fou réunit.<br />Elle
+          ne peut pas sauter au dessus d'une pièce quelle qu'elle soit.
+        </p>
+      </div>
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/reine.jpg" alt="La Reine" />
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : La Reine</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Les Pièces : La Roi</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div order_div"><p>La reine est considérée comme la pièce la plus puissante du jeu.<br> elle possède les mêmes déplacement que la tour et le fou réunit.<br>Elle ne peut pas sauter au dessus d'une pièce quelle qu'elle soit.</p></div>
-            <div class="section_div back_color"><img class="img_plateau" src="img/reine.jpg" alt="La Reine"></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/roi.jpg" alt="Le roi" />
+      </div>
+      <div class="section_div">
+        <p>
+          Le roi est une pièce qui peut se déplacer et manger d'une case tout
+          autour de lui.<br />C'est la pièce la plus importante du jeu et il
+          faut la protéger à tout prix.<br />La partie s'arrête quand un des
+          joueur est en échec et mat.
+        </p>
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Les Pièces : La Roi</h2>
-        </section>
+    <section class="section_titre back_color">
+      <h2>Le But Du Jeu</h2>
+    </section>
 
-        <section class="section_2">
-            <div class="section_div back_color"><img class="img_plateau" src="img/roi.jpg" alt="Le roi"></div>
-            <div class="section_div"><p>Le roi est une pièce qui peut se déplacer et manger d'une case tout autour de lui.<br>C'est la pièce la plus importante du jeu et il faut la protéger à tout prix.<br>La partie s'arrête quand un des joueur est en échec et mat.</p></div>
-        </section>
+    <section class="section_2">
+      <div class="section_div order_div"><p>Au échec, il faut...</p></div>
+      <div class="section_div back_color">
+        <img class="img_plateau" src="img/vide.jpg" alt="Rien" />
+      </div>
+    </section>
 
-        <section class="section_titre back_color">
-            <h2>Le But Du Jeu</h2>
-        </section>
-
-        <section class="section_2">
-            <div class="section_div order_div"><p>Au échec, il faut...</p></div>
-            <div class="section_div back_color"><img class="img_plateau" src="img/vide.jpg" alt="Rien"></div>
-        </section>
-
-        <script type="text/javascript" src="script.js"></script>
-    </body>
-
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
